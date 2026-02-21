@@ -49,7 +49,14 @@ st.sidebar.write("**Model:** LinearSVC")
 st.sidebar.write("**Vectorizer:** TF-IDF")
 st.sidebar.write("**Developed by:** Leisha Jain")
 
-input_text = st.text_area("✍️ Paste News Article Below:", height=200)
+
+col1, col2 = st.columns([3,1])
+
+with col1:
+    input_text = st.text_area("Paste News Article Below:", height=200)
+
+with col2:
+    analyze = st.button("🔍 Analyze News")
 
 if st.button("🔍 Analyze News"):
 
@@ -73,3 +80,4 @@ if st.button("🔍 Analyze News"):
         st.markdown("---")
 
         st.caption("⚠️ This prediction is based on machine learning analysis and may not be 100% accurate.")
+
