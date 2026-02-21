@@ -5,7 +5,7 @@ import joblib
 st.set_page_config(
     page_title="Fake News Detection",
     page_icon="📰",
-    layout="centered"
+    layout="wide"
 )
 
 # ------------------ LOAD MODEL ------------------
@@ -71,4 +71,5 @@ if st.button("🔍 Analyze News"):
         st.info(f"🔎 Confidence Score: {round(confidence, 2)}")
 
         st.markdown("---")
+
         st.caption("⚠️ This prediction is based on machine learning analysis and may not be 100% accurate.")
